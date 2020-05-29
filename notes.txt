@@ -1,0 +1,48 @@
+Level l1 = new Level("Level 1");
+l1.addColorChoice(Color.Red);
+l1.addColorChoice(Color.Yellow);
+l1.addColorChoice(Color.Blue);
+
+Level l2 = new Level(l1);
+l2.setName("Level 2");
+l1.addColorChoice(Color.Orange);
+l1.addColorChoice(Color.Green);
+l1.addColorChoice(Color.Violet);
+
+Level l2 = new Level(l2);
+l2.setName("Level 3");
+l1.addColorChoice(Color.Brown);
+
+******
+Game g = new Game();
+g.setCurrentState(new HomeState());
+List<GameObjects> l = g.getCurrentState().getGameObjects();
+for(GameObject o : l)
+	o.render(g.getGraphics());
+
+
+*****
+
+List<Customer> customers = new LinkedList<Customer>();
+customers.add(new Customer(level.getNumOrders()));
+
+public Customer(int num_orders)
+{
+	Random r = new Random();
+	int num_juice = r.nextInt(num_orders)+1;
+
+	for(int i=0; i < num_juice; i++){
+		orders.add(level.getColorChoices.get(r.nextInt(level.getColorChoices.size())));
+		glasses.add(new Glass());
+	}
+}
+
+
+
+
+
+
+
+
+
+
